@@ -2,6 +2,7 @@
 title: hexo搭建博客
 date: 2021-11-11 18:22:00
 tags: hexo
+categories: hexo
 ---
 
 ## **前言：**
