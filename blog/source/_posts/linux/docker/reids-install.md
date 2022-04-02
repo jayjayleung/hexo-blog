@@ -8,7 +8,7 @@ contact: linux/docker
 
 # 一、找到一个合适的docker的redis的版本
 
-可以去[docker hub][https://hub.docker.com/_/redis?tab=tags]中去找一下
+可以去[docker hub](https://hub.docker.com/_/redis?tab=tags)中去找一下
 
 
 
