@@ -115,7 +115,7 @@ theme: hexo-theme-matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/jayjayleung/jayjayleung.github.io.git
+  repo: git@github.com:jayjayleung/jayjayleung.github.io.git
   branch: main
 #搜索插件配置 npm install hexo-generator-search --save
 search:

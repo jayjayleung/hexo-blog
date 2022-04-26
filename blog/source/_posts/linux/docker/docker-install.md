@@ -207,34 +207,4 @@ systemctl restart docker
 
 > **注意：设置的日志大小，只对新建的容器有效。**
 
-设置完成之后，需要删除容器，并重新启动容器，我们可以看到`/var/lib/docker/containers/<容器id>/hostconfig.json`文件的变化如下：
- 设置`log-opts`之前：
-
-**
-
-```
-cat hostconfig.json
-# 其中的LogConfig如下
-"LogConfig": {
-    "Type": "json-file",
-    "Config": {}
-}
-复制代码
-```
-
-设置`log-opts`之后：
-
-**
-
-```
-cat hostconfig.json
-# 其中的LogConfig如下
-"LogConfig": {
-    "Type": "json-file",
-    "Config": {
-        "max-file": "3",
-        "max-size": "500m"
-    }
-}
-```
-
+设置完成之后，需要删除容器，并重新启动容器。
