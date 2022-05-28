@@ -208,3 +208,64 @@ systemctl restart docker
 > **注意：设置的日志大小，只对新建的容器有效。**
 
 设置完成之后，需要删除容器，并重新启动容器。
+
+
+
+修改Docker数据⽬录位置，包含镜像位
+--------------------------------------------------------
+
+docker安装后默认目录是 `/var/lib/docker`
+
+方法: 
+
+在/home 目录下创建目录
+
+```shell
+cd /home
+mkdir docker
+```
+
+修改docker的systemd的 docker.service的配置文件
+
+不知道 配置文件在哪里可以使用systemd 命令显示一下
+
+```shell
+systemctl disable docker
+```
+
+```shell
+systemctl enable docker
+```
+
+> Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
+
+修改docker.service文件
+
+```shell
+vim /usr/lib/systemd/system/docker.service
+```
+
+在里面的EXECStart的后面增加后如下:
+
+```shell
+ExecStart=/usr/bin/dockerd --graph /home/docker
+```
+
+重新enable 一下docker 服务 重新进行软连接 以及进行一次 daemon-reload
+
+```shell
+systemctl disable docker
+```
+
+```shell
+systemctl enable docker
+```
+
+```shell
+systemctl daemon-reload
+```
+
+```shell
+systemctl restart docker
+```
+
