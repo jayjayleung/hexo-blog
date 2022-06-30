@@ -1,10 +1,9 @@
 ---
 title: GitLab代码托管服务器安装
-date: 2022-04-02 21:11:51
+date: 2022-05-19
 tags: gitlab
 categories: linux
 contact: linux/gitlab
-
 ---
 
 
@@ -96,7 +95,9 @@ vi /etc/gitlab/gitlab.rb
 修改gitlab访问地址和端口，默认为80，我们改为82
 
 ```shell
+# 外部访问地址
 external_url 'http://192.168.3.25:82'
+# 访问端口，默认80
 nginx['listen_port']=82
 ```
 

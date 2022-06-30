@@ -166,11 +166,11 @@ rm -rf /var/lib/docker
 
 
 
-### 小知识
+## 小知识
 
 
 
-#### 设置docker容器日志大小（全局设置）
+### 设置docker容器日志大小（全局设置）
 
 每个容器的日志默认都会以 json-file 的格式存储于`/var/lib/docker/containers/<容器id>/<容器id>-json.log` 下,容器销毁后`/var/lib/docker/containers/<容器id>/`目录会被自动删除，所以容器日志也被一并删除。如果容器一直运行并且一直产生日志，容器日志会导致磁盘空间爆满，解决方法如下：
 
@@ -211,8 +211,7 @@ systemctl restart docker
 
 
 
-修改Docker数据⽬录位置，包含镜像位
---------------------------------------------------------
+### 修改Docker数据⽬录位置，包含镜像位
 
 docker安装后默认目录是 `/var/lib/docker`
 
